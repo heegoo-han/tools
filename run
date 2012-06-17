@@ -1,0 +1,1 @@
+../bin/cs_init.sh "x-service2 x-s x-s-ipc x-s-ipc-messages"
