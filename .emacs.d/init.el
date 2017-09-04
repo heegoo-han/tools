@@ -76,6 +76,28 @@
      (format "%s -f TAGS -e -R %s" path-to-ctags (directory-file-name dir-name)))
 )
 
+;;; https://medium.com/happyprogrammer-in-jeju/%EC%84%A0%EB%A7%9D%EC%9D%98-%EC%97%90%EB%94%94%ED%84%B0-%EC%9D%B4%EB%A7%A5%EC%8A%A4-emacs-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-2c412b27ee8d
+(desktop-save-mode 1)
+(defun change-buffer-until-normal (change-fn)
+  "call change-fn until meet normal buffer"
+  (let (current (buffer-name))
+    (funcall change-fn)
+    (while (and (string-prefix-p "*" (buffer-name))
+		(not (eq current (buffer-name))))
+      (funcall change-fn))))
+(defun my-next-buffer ()
+  "switch to next normal buffer"
+  (interactive)
+  (change-buffer-until-normal 'next-buffer))
+(defun my-prev-buffer ()
+  "switch to previous normal buffer"
+  (interactive)
+  (change-buffer-until-normal 'previous-buffer))
+
+(global-set-key [C-tab] 'my-next-buffer)
+(global-set-key [C-S-tab] 'my-prev-buffer)
+
+		      
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
