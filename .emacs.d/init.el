@@ -97,7 +97,7 @@
 (global-set-key [C-tab] 'my-next-buffer)
 (global-set-key [C-S-tab] 'my-prev-buffer)
 
-		      
+;;;;; elisp-guide :https://github.com/chrisdone/elisp-guide		      
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
