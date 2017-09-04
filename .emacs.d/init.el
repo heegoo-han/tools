@@ -65,8 +65,8 @@
 ;;; flymake-google-cpplint, flaymake-cursor-mode , google-c-style 
 ;;; (add-hook 'after-init-hook #'global-flycheck-mode)
 
-(require 'rtags)
-(cmake-ide-setup)
+;;(require 'rtags)
+;;(cmake-ide-setup)
 
 (setq path-to-ctags "/usr/bin/ctags")
 (defun create-tags (dir-name)
@@ -87,10 +87,11 @@
  '(custom-enabled-themes (quote (tango-dark)))
  '(package-selected-packages
    (quote
-    (rtags cmake-ide flymake-google-cpplint iedit auto-complete-c-headers auto-complete helm-swoop elpy))))
+    (magit rtags cmake-ide flymake-google-cpplint iedit auto-complete-c-headers auto-complete helm-swoop elpy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'scroll-left 'disabled nil)
