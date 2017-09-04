@@ -76,6 +76,18 @@
      (format "%s -f TAGS -e -R %s" path-to-ctags (directory-file-name dir-name)))
 )
 
+(global-linum-mode 1)
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-store-agenda)
+(setq org-log-done t)
+
+(autoload 'qml-mode "qml-mode" "Editing Qt Declarative." t)
+(add-to-list 'auto-mode-alist '("\\.qml$" . qml-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -87,7 +99,7 @@
  '(custom-enabled-themes (quote (tango-dark)))
  '(package-selected-packages
    (quote
-    (magit rtags cmake-ide flymake-google-cpplint iedit auto-complete-c-headers auto-complete helm-swoop elpy))))
+    (company-qml qml-mode magit rtags cmake-ide flymake-google-cpplint iedit auto-complete-c-headers auto-complete helm-swoop elpy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
