@@ -24,6 +24,8 @@ Plugin 'vimshell-ssh'
 Plugin 'The-NERD-Commenter'
 Plugin 'DoxygenToolkit.vim'
 Plugin 'SearchComplete'
+
+Plugin 'w0rp/ale'
  
 call vundle#end()
 
