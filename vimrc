@@ -1,6 +1,13 @@
 " start
+" vim install
+" sudo add-apt-repository ppa:jonathonf/vim
+" sudo apt-get update
+" sudo apt-get install --only-upgrade vim
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " vim -> :PluginInstall
+" pdf : byte of vim
+
+
 filetype off                  " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -28,8 +35,6 @@ Plugin 'SearchComplete'
 Plugin 'w0rp/ale'
  
 call vundle#end()
-
-
 
 " :help add-plugin
 " :help add-local-help
