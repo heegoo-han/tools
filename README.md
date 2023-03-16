@@ -4,8 +4,10 @@ February 5, 2018
 
 Editors:
 
-* [Heegoo Han] 
+- [Heegoo Han]
 
-* raw emacs init.ed : .emacs.d/init.el
+- raw emacs init.ed : .emacs.d/init.el
 
-* .vimrc : hwork/tools/vimrc
+- .vimrc : hwork/tools/vimrc
+
+- hmm
